@@ -1,9 +1,9 @@
 // import { renderFavorites } from './views/favorites.js';
-import { renderHome } from "./views/home.js";
-import { renderAbout } from "./views/about.js";
-import { renderFavorites } from "./views/favorites-view.js";
-import { handlerSearch } from "./events/searchHandler.js";
-import { renderStartingView } from "./views/starting-view.js";
+import { renderHome } from "./src/views/home.js";
+import { renderAbout } from "./src/views/about.js";
+import { renderFavorites } from "./src/views/favorite-view.js";
+import { handlerSearch } from "./src/events/searchHandler.js";
+import { renderStartingView } from "./src/views/starting-view.js";
 
 const app = document.getElementById("app");
 const header = document.getElementById("header");
@@ -13,7 +13,6 @@ const aboutBtn = document.getElementById("about-btn");
 const searchInput = document.getElementById("search");
 
 export async function loadView(view) {
-  
   app.innerHTML = "";
   try {
     const node = await view();
